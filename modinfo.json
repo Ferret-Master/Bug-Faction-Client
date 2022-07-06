@@ -1,31 +1,34 @@
 {
-    "context": "client",
-    "identifier": "com.pa.ferretmaster.bugs-client",
-    "display_name": "Bug Faction Client",
-    "description": "Adds a biological bugs faction",
-    "author": "Ferretmaster, BillTheBlueBot, Anonemous2, Taiga",
-    "version": "1.0",
-    "build": "115872",
-    "date": "2022-07-06",
-    "signature": "not yet implemented",
-    "forum": "https://github.com/Ferret-Master/Bug-Faction-Client",
-    "icon": "",
-    "priority": 100,
-    "dependencies": ["com.pa.ferretmaster.bugs"],
-    "category": [
-        "titans", "in-game","server"
-        
+  "context": "client",
+  "identifier": "com.pa.ferretmaster.bugs-client",
+  "display_name": "Bug Faction Client",
+  "description": "Adds a biological bugs faction",
+  "author": "Ferretmaster, BillTheBlueBot, Anonemous2, Taiga",
+  "version": "1.0",
+  "build": "115872",
+  "date": "2022-07-06",
+  "signature": "not yet implemented",
+  "forum": "https://github.com/Ferret-Master/Bug-Faction-Client",
+  "icon": "",
+  "priority": 100,
+  "dependencies": [
+    "com.pa.ferretmaster.bugs"
+  ],
+  "category": [
+    "titans",
+    "in-game",
+    "server"
+  ],
+  "scenes": {
+    "settings": [
+      "coui://ui/mods/bugs_faction/settings.js"
     ],
-    
-    "scenes": {
-    "settings": ["coui://ui/mods/bugs_faction/settings.js"],
     "start": [
       "coui://ui/mods/bugs_faction/start.js"
     ],
     "live_game": [
       "coui://ui/mods/bugs_faction/live_game/selection_audio.js"
     ]
-		
-	},
+  },
   "hidden": true
 }
