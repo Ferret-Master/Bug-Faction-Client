@@ -1,0 +1,29 @@
+{
+    "context": "client",
+    "identifier": "bugs-client",
+    "display_name": "Bug Faction Client",
+    "description": "Adds a biological bugs faction",
+    "author": "Ferretmaster, BillTheBlueBot, Anonemous2, Taiga",
+    "version": "1.0",
+    "build": "115626",
+    "date": "2021-5-31",
+    "signature": "not yet implemented",
+    "forum": "",
+    "icon": "",
+    "priority": 100,
+    "category": [
+        "titans", "in-game","server"
+        
+    ],
+    
+    "scenes": {
+    "settings": ["coui://ui/mods/bugs_faction/settings.js"],
+    "start": [
+      "coui://ui/mods/bugs_faction/start.js"
+    ],
+    "live_game": [
+      "coui://ui/mods/bugs_faction/live_game/selection_audio.js"
+    ]
+		
+	}
+}

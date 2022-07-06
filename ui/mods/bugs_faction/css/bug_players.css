@@ -1,0 +1,13 @@
+.player_masked.b_com {
+    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/icon_player_fill_b.png") !important;
+  }
+  
+  .player_masked.b_m_l_Com {
+    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/icon_player_fill_b_m_l.png") !important;
+  }
+  .player_masked.b_m_Com {
+    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/icon_player_fill_b_m.png") !important;
+  }
+  .player_masked.b_l_Com {
+    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/icon_player_fill_b_l.png") !important;
+  }
