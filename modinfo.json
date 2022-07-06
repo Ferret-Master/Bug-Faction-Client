@@ -8,7 +8,7 @@
     "build": "115872",
     "date": "2022-07-06",
     "signature": "not yet implemented",
-    "forum": "",
+    "forum": "https://github.com/Ferret-Master/Bug-Faction-Client",
     "icon": "",
     "priority": 100,
     "dependencies": ["com.pa.ferretmaster.bugs"],
