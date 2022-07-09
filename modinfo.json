@@ -4,12 +4,12 @@
   "display_name": "Bug Faction Client",
   "description": "Adds a biological bugs faction",
   "author": "Ferretmaster, BillTheBlueBot, Anonemous2, Taiga",
-  "version": "1.0",
+  "version": "1.01",
   "build": "115872",
-  "date": "2022-07-06",
+  "date": "2022-07-09",
   "signature": "not yet implemented",
   "forum": "https://github.com/Ferret-Master/Bug-Faction-Client",
-  "icon": "",
+  "icon": "https://github.com/Ferret-Master/Bug-Faction-Client/blob/main/client_icon.png?raw=true",
   "priority": 100,
   "dependencies": [
     "com.pa.ferretmaster.bugs"

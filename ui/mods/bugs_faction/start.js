@@ -1,6 +1,7 @@
 var bugStartLoaded;
 var legionStartLoaded;
-model.selectedTheme = ko.observable(-1).extend({ session: 'selectedTheme' });
+if(localStorage.selectedTheme == undefined){localStorage.selectedTheme = -1}
+model.selectedTheme = ko.observable(localStorage.selectedTheme)
 
 if (!bugStartLoaded) {
   bugStartLoaded = true;
@@ -79,5 +80,11 @@ if (!bugStartLoaded) {
   }
   bugsStart();
 }
+
+ko.computed(function(){
+  localStorage.selectedTheme = model.selectedTheme();
+})
+
+
 
 

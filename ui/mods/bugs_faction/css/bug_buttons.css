@@ -7,21 +7,21 @@
     color: white !important;
   }
 
-  #user-details {
-    background: rgba(30, 30, 30, 0.8) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1) !important;
+   .bugs #user-details {
+    background: rgba(30, 30, 30, 0) !important;
+  
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0) !important;
     text-shadow: 0 0 15px rgba(100, 100, 1000, 0.5) !important;
     color: white !important;
-  }
+  } 
 
-  #ladder-details {
-    background: rgba(30, 30, 30, 1) !important;
-    border: 1px solid rgba(0, 100, 0, 0.2) !important;
-    box-shadow: inset 0 0 8px rgba(0, 100, 0, 0.1) !important;
+  .bugs #ladder-details {
+    background: rgba(30, 30, 30, 0) !important;
+    border: 1px solid rgba(0, 100, 0, 0) !important;
+    box-shadow: inset 0 0 8px rgba(0, 100, 0, 0) !important;
     text-shadow: 0 0 15px rgba(0, 100, 0, 0.5) !important;
     color: white !important;
-  }
+  } 
   
   .bugs .btn_std_ix:hover {
     background: rgba(0, 255, 0, 0.7) !important;
