@@ -2,10 +2,6 @@ body.bugs #background {
   background-image: url("coui://ui/mods/bugs_faction/img/Bug_Menu.png");
 }
 
-body.bugs #logo-background {
-  background-image: url("coui://ui/mods/bugs_faction/logos/logo.png");
-}
-
 body.bugs {
   background-image: url("coui://ui/mods/bugs_faction/img/Bug_Menu.png");
 }
