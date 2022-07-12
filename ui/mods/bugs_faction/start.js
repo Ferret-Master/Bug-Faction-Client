@@ -2,13 +2,18 @@ var bugStartLoaded;
 var legionStartLoaded;
 if(localStorage.selectedTheme == undefined){localStorage.selectedTheme = -1}
 model.selectedTheme = ko.observable(localStorage.selectedTheme)
-
+model.randomThemeSet = ko.observable(false).extend({session:'randomTheme'})
 if (!bugStartLoaded) {
   bugStartLoaded = true;
 
   function bugsStart() {
     try {
-
+      var randomTheme = api.settings.isSet("ui", "bugsMenuThemeRandom", true) || "OFF";
+      if(randomTheme == "ON" && model.randomThemeSet() == false){
+        var chosenRandomTheme = _.sample(["bugs","legion","mla"])
+        model.selectedTheme(chosenRandomTheme);
+        model.randomThemeSet(true);
+      }
       var bugThemeSetting = api.settings.isSet("ui", "bugsMenuThemeFunction", true) || "ON";
 
       var legionThemeSetting = api.settings.isSet("ui", "legionMenuThemeFunction", true) || "ON";

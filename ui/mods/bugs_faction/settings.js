@@ -23,6 +23,15 @@ if (!bugSettingsLoaded) {
         },
       });
 
+      _.assign(api.settings.definitions.ui.settings, {
+        bugsMenuThemeRandom: {
+          title: "Random Theme",
+          type: "select",
+          default: "OFF",
+          options: ["ON", "OFF"],
+        },
+      });
+
       model.settingDefinitions(api.settings.definitions);
 
       $(".option-list.ui .form-group").append(
