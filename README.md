@@ -18,5 +18,6 @@ and uses modified versions of the following:
  - https://github.com/Legion-Expansion/Legion-Expansion/blob/develop/src/client/ui/mods/com.pa.legion-expansion/css/legion_buttons.css
  - https://github.com/Legion-Expansion/Legion-Expansion/blob/develop/src/client/ui/mods/com.pa.legion-expansion/css/legion_shared.css
  - https://github.com/Legion-Expansion/Legion-Expansion/blob/develop/src/client/ui/mods/com.pa.legion-expansion/css/start.css
+ - https://github.com/Legion-Expansion/Legion-Expansion/blob/develop/src/client/ui/mods/com.pa.legion-expansion/live_game_players.js
 
 The background code is expanded upon to include the bug faction background and a theme switch button to switch between mla, legion(if enabled), and bugs themes
