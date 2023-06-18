@@ -1,13 +1,28 @@
-.player_masked.b_com {
-    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/icon_player_fill_b.png") !important;
-  }
-  
-  .player_masked.b_m_l_Com {
-    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/icon_player_fill_b_m_l.png") !important;
-  }
-  .player_masked.b_m_Com {
-    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/icon_player_fill_b_m.png") !important;
-  }
-  .player_masked.b_l_Com {
-    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/icon_player_fill_b_l.png") !important;
-  }
+.player_masked.legcom {
+  -webkit-mask-image: url("coui://ui/mods/com.pa.legion-expansion/img/icon_player_fill_l.png") !important;
+}
+
+.player_masked.mixcom {
+  -webkit-mask-image: url("coui://ui/mods/com.pa.legion-expansion/img/icon_player_fill_m.png") !important;
+}
+
+.player_masked.bugcom {
+  -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/bug_icon_fill.png") !important;
+}
+
+.player_masked.bugmlacom {
+  -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/bug_mla_icon_fill.png") !important;
+}
+
+.player_masked.buglegioncom {
+  -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/bug_legion_icon_fill.png") !important;
+}
+
+.player_masked.buglegionmlacom {
+  -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/bug_legion_mla_icon_fill.png") !important;
+}
+
+
+
+
+    

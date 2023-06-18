@@ -4,13 +4,13 @@
   "display_name": "Bug Faction Client",
   "description": "Adds a biological bugs faction",
   "author": "Ferretmaster, BillTheBlueBot, Anonemous2, Taiga",
-  "version": "1.03",
-  "build": "116931",
-  "date": "2023-04-29",
+  "version": "1.05",
+  "build": "116982",
+  "date": "2023-06-18",
   "signature": "not yet implemented",
   "forum": "https://github.com/Ferret-Master/Bug-Faction-Client",
   "icon": "https://github.com/Ferret-Master/Bug-Faction-Client/blob/main/client_icon.png?raw=true",
-  "priority": 100,
+  "priority": 110,
   "dependencies": [
     "com.pa.ferretmaster.bugs"
   ],
@@ -28,6 +28,9 @@
     ],
     "live_game": [
       "coui://ui/mods/bugs_faction/live_game/selection_audio.js"
+    ],
+    "live_game_players": [
+      "coui://ui/mods/bugs_faction/live_game/players.js"
     ]
   },
   "hidden": true
