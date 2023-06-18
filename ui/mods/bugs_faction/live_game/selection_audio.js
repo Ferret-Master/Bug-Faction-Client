@@ -23,10 +23,10 @@ var playAudioSequence = function(audioList){
         if(audioGrace == undefined){gracePeriod[audioList[i]] =currentTime}
         else if(currentTime - audioGrace < 400){continue}
         _.delay(api.audio.playSoundFromFile,totalDelay,audioList[i])
-        console.log(audioGrace)
-        console.log(currentTime - audioGrace)
-        console.log(audioList[i]);
-        console.log(totalDelay);
+        // console.log(audioGrace)
+        // console.log(currentTime - audioGrace)
+        // console.log(audioList[i]);
+        // console.log(totalDelay);
         gracePeriod[audioList[i]] = currentTime;
         totalDelay += delay;
     } 
