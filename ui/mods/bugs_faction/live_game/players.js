@@ -1,7 +1,12 @@
 //most code in this file was taken from legions live game players file
 
 var bugsLiveGamePlayersLoaded;
-var legionCommanders = ["/pa/units/commanders/l_overwatch/l_overwatch.json", "/pa/units/commanders/l_rockteeth/l_rockteeth.json", "/pa/units/commanders/l_cyclops/l_cyclops.json", "/pa/units/commanders/l_wasushi/l_wasushi.json"]
+var legionCommanders = [  "/pa/units/commanders/l_overwatch/l_overwatch.json",
+"/pa/units/commanders/l_cyclops/l_cyclops.json",
+"/pa/units/commanders/l_cataphract/l_cataphract.json",
+"/pa/units/commanders/l_raptor/l_raptor.json",
+"/pa/units/commanders/l_quad/l_quad.json",
+"/pa/units/commanders/l_tank/l_tank.json"]
 var bugCommanders = ["/pa/units/commanders/bug_commander/bug_commander.json","/pa/units/commanders/scenario_ai_invincible_com/scenario_ai_invincible_com.json"]
 
 if (!bugsLiveGamePlayersLoaded) {

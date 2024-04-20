@@ -4,15 +4,16 @@
   "display_name": "Bug Faction Client",
   "description": "Adds a biological bugs faction",
   "author": "Ferretmaster, BillTheBlueBot, Anonemous2, Taiga",
-  "version": "1.07",
+  "version": "1.08",
   "build": "116982",
-  "date": "2023-11-03",
+  "date": "2024-04-20",
   "signature": "not yet implemented",
   "forum": "https://github.com/Ferret-Master/Bug-Faction-Client",
   "icon": "https://github.com/Ferret-Master/Bug-Faction-Client/blob/main/client_icon.png?raw=true",
   "priority": 110,
   "dependencies": [
-    "com.pa.ferretmaster.bugs"
+    "com.pa.ferretmaster.bugs-dev",
+    "com.pa.raevn.rfloatframe"
   ],
   "category": [
     "titans",
@@ -31,6 +32,10 @@
     ],
     "live_game_players": [
       "coui://ui/mods/bugs_faction/live_game/players.js"
+    ],
+    "LiveGame_FloatZone": [
+      "coui://ui/mods/bugs_faction/live_game/researchIcons.css",
+      "coui://ui/mods/bugs_faction/live_game/researchIcons.js"
     ]
   },
   "hidden": true
