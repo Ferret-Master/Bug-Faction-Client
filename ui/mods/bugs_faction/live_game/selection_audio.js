@@ -1,6 +1,8 @@
 
 model.selectionAudioMap = {}
 
+
+
 //load the selection list
 $.getJSON("coui://ui/mods/bugs_faction/live_game/selection_list.json").then(function(data){
 	//console.log(data)
@@ -65,3 +67,7 @@ var selectionSoundChecker = ko.computed(function(){
   
   })
 
+_.delay(function(){
+    if(model.unitSpecs["/pa/units/land/bug_grunt/bug_grunt.json"] !== undefined){localStorage.bugsEnabled = "true";}
+    else{localStorage.bugsEnabled = "false"}
+},3000)
