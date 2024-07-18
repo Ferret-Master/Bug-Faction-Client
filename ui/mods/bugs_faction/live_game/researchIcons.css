@@ -1,0 +1,70 @@
+.hide-for-cast  #data_util_frame {
+	display: none;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  
+  .column {
+	float: left;
+ 	width: 33.33%;
+  }
+  
+.research_lock_icon {
+	height: 20px;
+	position: absolute;
+	left: 25px;
+	bottom: 205px;
+}
+
+.icon_container
+{
+    text-align: center;
+    width: 100%;
+    max-height: 100%;
+    box-shadow:0px 0px 5px #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #1e7aa1;
+}
+
+.research_visible_icon {
+	height: 20px;
+	position: absolute;
+	bottom: 205px;
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.research_icon{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+  
+  /* Tooltip text */
+.research_tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	bottom:-60px;
+	padding-left: 5px;
+	right:1px;
+
+	font-size: 12px;
+	text-align: left;
+	align-items: left;
+	word-wrap:normal;
+	color:  #4FFF69;
+	text-shadow: 0px 0px 10px #00B3FF;
+   
+	/* Position the tooltip text - see examples below! */
+	position:absolute;
+	z-index: 1;
+}
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+.research_tooltip:hover .tooltiptext {
+	visibility: visible;
+}

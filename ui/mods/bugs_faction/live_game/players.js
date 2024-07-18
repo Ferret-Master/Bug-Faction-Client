@@ -35,6 +35,13 @@ if (!bugsLiveGamePlayersLoaded) {
             if(mlaFound == true){mlaCount++}
             specsLength++;
           });
+          if(bugsCount>0){
+            _.delay(function(){api.Panel.message(api.panels["LiveGame_FloatZone"].id, 'bugsInTeam', true)}, 4000)
+          }
+          else{
+            _.delay(function(){api.Panel.message(api.panels["LiveGame_FloatZone"].id, 'bugsInTeam', false)}, 4000)
+          }
+
           if(legionCount == specsLength){return "legion"}
           if(bugsCount == specsLength){return "bugs"}
           if(legionCount > 0 && mlaCount > 0 && bugsCount == 0){return "mixed"}
