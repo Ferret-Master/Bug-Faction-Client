@@ -21,6 +21,9 @@
 .player_masked.buglegionmlacom {
   -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/bug_legion_mla_icon_fill.png") !important;
 }
+.player_masked.exilescom{
+    -webkit-mask-image: url("coui://ui/mods/bugs_faction/img/exiles_icon_fill.png") !important;
+}
 
 
 

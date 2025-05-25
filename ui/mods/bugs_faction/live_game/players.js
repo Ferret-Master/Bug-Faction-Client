@@ -8,6 +8,10 @@ var legionCommanders = [  "/pa/units/commanders/l_overwatch/l_overwatch.json",
 "/pa/units/commanders/l_quad/l_quad.json",
 "/pa/units/commanders/l_tank/l_tank.json"]
 var bugCommanders = ["/pa/units/commanders/bug_commander/bug_commander.json","/pa/units/commanders/scenario_ai_invincible_com/scenario_ai_invincible_com.json"]
+var exileCommanders = [
+  "/pa/units/commanders/exiles_blueberry/union_formidable.json",
+  "/pa/units/commanders/exiles_maxim/exiles_maxim.json"
+]
 
 if (!bugsLiveGamePlayersLoaded) {
   bugsLiveGamePlayersLoaded = true;
@@ -15,6 +19,7 @@ if (!bugsLiveGamePlayersLoaded) {
     try {
       loadCSS("coui://ui/mods/bugs_faction/css/bug_players.css");
       var checkCommanders = function (commanders) {
+        var exilesCount = 0;
         var legionCount = 0;
         var bugsCount = 0;
         var mlaCount = 0;
@@ -26,6 +31,10 @@ if (!bugsLiveGamePlayersLoaded) {
             // eslint-disable-next-line no-undef
             if (_.includes(legionCommanders, value)) {
               legionCount++
+              mlaFound = false;
+            }
+            if (_.includes(exilesCommanders, value)) {
+              exilesCount++
               mlaFound = false;
             }
             if (_.includes(bugCommanders, value)) {
@@ -44,6 +53,7 @@ if (!bugsLiveGamePlayersLoaded) {
 
           if(legionCount == specsLength){return "legion"}
           if(bugsCount == specsLength){return "bugs"}
+          if(exilesCount == specsLength){return "exiles"}
           if(legionCount > 0 && mlaCount > 0 && bugsCount == 0){return "mixed"}
           if(legionCount > 0 && bugsCount > 0 && mlaCount == 0){return "legion_bug_mix"}
           if(legionCount > 0 && bugsCount > 0 && mlaCount > 0){return "legion_bug_mla_mix"}
@@ -61,6 +71,10 @@ if (!bugsLiveGamePlayersLoaded) {
 
       model.isLegion = ko.computed(function () {
         return isLegionOrMixedOrVanilla() === "legion";
+      });
+
+      model.isExiles = ko.computed(function () {
+        return isLegionOrMixedOrVanilla() === "exiles";
       });
 
       model.isMixed = ko.computed(function () {
@@ -86,6 +100,9 @@ if (!bugsLiveGamePlayersLoaded) {
       model.commanderImage = function (data) {
         var result = "";
         switch (checkCommanders(data.commanders)) {
+            case "exiles":
+            result = "coui://ui/mods/bugs_faction/img/exiles_icon_outline.png";
+            break;
             case "legion":
             result = "coui://ui/mods/com.pa.legion-expansion/img/icon_player_outline_l.png";
             break;
@@ -112,6 +129,9 @@ if (!bugsLiveGamePlayersLoaded) {
         return result;
       };
 
+      model.commanderImageMaskExiles = function (data) {
+        return checkCommanders(data.commanders) === "exiles";
+      };
       model.commanderImageMaskBugs = function (data) {
         return checkCommanders(data.commanders) === "bugs";
       };
@@ -143,7 +163,7 @@ if (!bugsLiveGamePlayersLoaded) {
       );
       $(".player_masked").attr(
         "data-bind",
-        "style: { backgroundColor: color }, css: { legcom: model.commanderImageMaskLeg($data), mixcom: model.commanderImageMaskMix($data), bugcom: model.commanderImageMaskBugs($data), bugmlacom: model.commanderImageMaskBugsMla($data), buglegioncom: model.commanderImageMaskBugsLegion($data), buglegionmlacom: model.commanderImageMaskBugsLegionMla($data)}"
+        "style: { backgroundColor: color }, css: { exilescom: model.commanderImageMaskExiles($data), legcom: model.commanderImageMaskLeg($data), mixcom: model.commanderImageMaskMix($data), bugcom: model.commanderImageMaskBugs($data), bugmlacom: model.commanderImageMaskBugsMla($data), buglegioncom: model.commanderImageMaskBugsLegion($data), buglegionmlacom: model.commanderImageMaskBugsLegionMla($data)}"
       );
     } catch (e) {
       console.error(e);
