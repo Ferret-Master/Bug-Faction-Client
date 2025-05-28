@@ -33,7 +33,7 @@ if (!bugsLiveGamePlayersLoaded) {
               legionCount++
               mlaFound = false;
             }
-            if (_.includes(exilesCommanders, value)) {
+            if (_.includes(exileCommanders, value)) {
               exilesCount++
               mlaFound = false;
             }
