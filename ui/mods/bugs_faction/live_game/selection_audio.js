@@ -1,4 +1,6 @@
 
+loadScript("coui://ui/mods/bugs_faction/spec_path.js");
+
 model.selectionAudioMap = {}
 
 
@@ -46,7 +48,10 @@ var selectionSoundChecker = ko.computed(function(){
     var selection = model.selection();
     if(selection === undefined){return}
     if(selection === null){selectionResetSinceLastPlay = true;previousSpecCount = 0; return}
-    var selectionId = selection.spec_ids;
+    var selectionId = {};
+    _.forOwn(selection.spec_ids, function(count, id){
+        selectionId[bugsSpecPath(id)] = count;
+    });
     var unitTypeNumber = _.keys(model.selection().spec_ids).length;
     if(unitTypeNumber > previousSpecCount){selectionResetSinceLastPlay = true; previousSpecCount = unitTypeNumber}
    
@@ -68,6 +73,9 @@ var selectionSoundChecker = ko.computed(function(){
   })
 
 _.delay(function(){
-    if(model.unitSpecs["/pa/units/land/bug_grunt/bug_grunt.json"] !== undefined){localStorage.bugsEnabled = "true";}
+    var bugsInGame = _.some(_.keys(model.unitSpecs), function(id){
+        return bugsSpecPath(id) === "/pa/units/land/bug_grunt/bug_grunt.json";
+    });
+    if(bugsInGame){localStorage.bugsEnabled = "true";}
     else{localStorage.bugsEnabled = "false"}
 },3000)
