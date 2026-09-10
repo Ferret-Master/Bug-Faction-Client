@@ -15,6 +15,21 @@ var exileCommanders = [
   "/pa/units/commanders/exiles_taurus/exiles_taurus.json"
 ]
 
+// Galactic War (and GW Overhaul) tags every unit spec a player's own army
+// can build with a per-army suffix appended after ".json" - e.g.
+// "/pa/units/commanders/bug_commander/bug_commander.json.player" for the
+// local human player, ".player0"/".ai0" etc. for others - so a commander's
+// spec id here can differ from the untagged paths hardcoded below even
+// though it is the same commander. Strip any such suffix before comparing,
+// so this still recognises a Bugs commander when playing Bugs in GW.
+function stripSpecTag(path) {
+  if (typeof path !== "string") {
+    return path;
+  }
+  var jsonIndex = path.lastIndexOf(".json");
+  return jsonIndex === -1 ? path : path.slice(0, jsonIndex + 5);
+}
+
 if (!bugsLiveGamePlayersLoaded) {
   bugsLiveGamePlayersLoaded = true;
   function bugsLiveGamePlayers() {
@@ -31,17 +46,17 @@ if (!bugsLiveGamePlayersLoaded) {
           var factionArray = [];
           _.forOwn(commanders, function (value) {
             var mlaFound = true;
-            var spec = bugsSpecPath(value);
+            var untaggedValue = stripSpecTag(value);
             // eslint-disable-next-line no-undef
-            if (_.includes(legionCommanders, spec)) {
+            if (_.includes(legionCommanders, untaggedValue)) {
               legionCount++
               mlaFound = false;
             }
-            if (_.includes(exileCommanders, spec)) {
+            if (_.includes(exileCommanders, untaggedValue)) {
               exilesCount++
               mlaFound = false;
             }
-            if (_.includes(bugCommanders, spec)) {
+            if (_.includes(bugCommanders, untaggedValue)) {
               bugsCount++;
               mlaFound = false;
             }
