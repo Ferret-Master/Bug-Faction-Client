@@ -9,9 +9,10 @@ var legionCommanders = [  "/pa/units/commanders/l_overwatch/l_overwatch.json",
 "/pa/units/commanders/l_tank/l_tank.json"]
 var bugCommanders = ["/pa/units/commanders/bug_commander/bug_commander.json","/pa/units/commanders/scenario_ai_invincible_com/scenario_ai_invincible_com.json"]
 var exileCommanders = [
-  "/pa/units/commanders/exiles_blueberry/union_formidable.json",
+  "/pa/units/commanders/exiles_blueberry/exiles_blueberry.json",
   "/pa/units/commanders/exiles_maxim/exiles_maxim.json",
-  "/pa/units/commanders/exiles_brainiac/exiles_brainiac.json"
+  "/pa/units/commanders/exiles_brainiac/exiles_brainiac.json",
+  "/pa/units/commanders/exiles_taurus/exiles_taurus.json"
 ]
 
 // Galactic War (and GW Overhaul) tags every unit spec a player's own army
@@ -34,6 +35,7 @@ if (!bugsLiveGamePlayersLoaded) {
   function bugsLiveGamePlayers() {
     try {
       loadCSS("coui://ui/mods/bugs_faction/css/bug_players.css");
+      loadScript("coui://ui/mods/bugs_faction/spec_path.js");
       var checkCommanders = function (commanders) {
         var exilesCount = 0;
         var legionCount = 0;
